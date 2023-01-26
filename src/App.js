@@ -10,12 +10,13 @@ import {
   createAccountWrapper,
   joinRedditWrapper,
 } from '@styles/styles';
+import Navbar from '@navigation/Navbar';
 
 function App() {
   return (
     <React.Fragment>
       <Box sx={appWrapper}>
-        {/* nav bar */}
+        <Navbar />
         <Box sx={contentWrapper}>
           <Box sx={sideBarWrapper}>
             <Box sx={scrollListWrapper}>{/* side bar list */}</Box>
