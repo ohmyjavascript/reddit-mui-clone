@@ -12,6 +12,7 @@ import {
   flex,
 } from '@styles/styles';
 import Logo from '@navigation/Logo';
+import SearchBar from '@navigation/SearchBar';
 
 const Navbar = () => {
   return (
@@ -24,7 +25,9 @@ const Navbar = () => {
               {/* mobile nav - shown only in small viewports */}
             </Box>
           </Box>
-          <Box>{/* search bar */}</Box>
+          <Box>
+            <SearchBar />
+          </Box>
           <Box sx={flex}>
             <Box sx={loginBtnWrapper}>{/* Login buttons */}</Box>
             {/* user profile section */}
