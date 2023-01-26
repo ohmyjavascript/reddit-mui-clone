@@ -13,6 +13,7 @@ import {
 } from '@styles/styles';
 import Logo from '@navigation/Logo';
 import SearchBar from '@navigation/SearchBar';
+import CustomButton from '@shared/CustomButton';
 
 const Navbar = () => {
   return (
@@ -29,7 +30,20 @@ const Navbar = () => {
             <SearchBar />
           </Box>
           <Box sx={flex}>
-            <Box sx={loginBtnWrapper}>{/* Login buttons */}</Box>
+            <Box sx={loginBtnWrapper}>
+              <CustomButton
+                text="Get App"
+                bgColor="background.customBtn"
+                color="text.btnText"
+                space
+              />
+              <CustomButton
+                text="Login"
+                bgColor="background.customBtn2"
+                color="text.btnText"
+                space
+              />
+            </Box>
             {/* user profile section */}
           </Box>
         </Box>
