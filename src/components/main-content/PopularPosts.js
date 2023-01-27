@@ -13,6 +13,7 @@ import {
 import PostSort from '@main/PostSort';
 import PopularCommunities from '@main/PopularCommunities';
 import Policy from '@main/Policy';
+import InfoCard from '@main/InfoCard';
 
 const PopularPosts = () => {
   return (
@@ -27,7 +28,7 @@ const PopularPosts = () => {
           </Box>
 
           {cardContentItems.map((item) => {
-            return <h1 key={item.id}> Info card </h1>;
+            return <InfoCard key={item.id} item={item} />;
           })}
         </Box>
         <Box sx={communitiesWrapper}>
