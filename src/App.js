@@ -11,6 +11,7 @@ import {
   joinRedditWrapper,
 } from '@styles/styles';
 import Navbar from '@navigation/Navbar';
+import SideList from '@components/SideList';
 
 function App() {
   return (
@@ -19,7 +20,9 @@ function App() {
         <Navbar />
         <Box sx={contentWrapper}>
           <Box sx={sideBarWrapper}>
-            <Box sx={scrollListWrapper}>{/* side bar list */}</Box>
+            <Box sx={scrollListWrapper}>
+              <SideList />
+            </Box>
             <Box sx={createAccountWrapper}>
               <Box sx={joinRedditWrapper}>{/* join reddit section */}</Box>
             </Box>
