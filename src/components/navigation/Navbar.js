@@ -14,6 +14,7 @@ import {
 import Logo from '@navigation/Logo';
 import SearchBar from '@navigation/SearchBar';
 import CustomButton from '@shared/CustomButton';
+import UserProfile from '@navigation/UserProfile';
 
 const Navbar = () => {
   return (
@@ -44,7 +45,7 @@ const Navbar = () => {
                 space
               />
             </Box>
-            {/* user profile section */}
+            <UserProfile />
           </Box>
         </Box>
       </Toolbar>

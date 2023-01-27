@@ -12,27 +12,27 @@ import ListItemText from '@mui/material/ListItemText';
 import Menu from '@mui/material/Menu';
 import React from 'react';
 import { grayText, userProfileMinWidth } from '@styles/styles';
+import useToggle from '@hooks/useToggle';
 
 const UserProfile = () => {
+  const { el, open, handleClick, handleClose } = useToggle();
   return (
     <Box sx={{ px: 1 }}>
-      <Button sx={grayText} id="basic-button" onClick={}>
+      <Button sx={grayText} id="basic-button" onClick={handleClick}>
         <FiUser size={24} />
         {open ? <BiChevronUp size={24} /> : <BiChevronDown size={24} />}
       </Button>
       <Menu
         sx={{ mt: 2 }}
         id="basic-menu"
-        anchorEl={}
-        open={}
-        onClose={}
+        anchorEl={el}
+        open={open}
+        onClose={handleClose}
         MenuListProps={{
           'aria-labelledby': 'basic-button',
         }}
       >
-        <Box sx={userProfileMinWidth}>
-          {/* list */}
-        </Box>
+        <Box sx={userProfileMinWidth}> test {/* list */}</Box>
       </Menu>
     </Box>
   );
