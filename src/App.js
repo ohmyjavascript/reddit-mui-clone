@@ -15,6 +15,7 @@ import SideList from '@components/SideList';
 import { blue, grey } from '@mui/material/colors';
 import { Typography } from '@mui/material';
 import CustomButton from '@shared/CustomButton';
+import AppContentArea from '@components/AppContentArea';
 
 function App() {
   return (
@@ -40,6 +41,9 @@ function App() {
                 />
               </Box>
             </Box>
+          </Box>
+          <Box sx={contentAreaWrapper}>
+            <AppContentArea />
           </Box>
         </Box>
       </Box>

@@ -1,0 +1,53 @@
+/*
+  Styles for Image Box
+*/
+.imageBoxWrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+}
+.imageBox {
+  height: 200px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 350px) {
+  .box1 {
+    display: block;
+    width: 100%
+  }
+  .box2, .box3, .box4 {
+    display: none
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .box1, .box2 {
+    display: block;
+    width: 48%
+  }
+   .box3, .box4 {
+    display: none
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .box1, .box2, .box3 {
+    display: block;
+    width: 32%
+  }
+    .box4 {
+    display: none
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .box1, .box2, .box3, .box4 {
+    display: block;
+    width: 24%
+  }
+}
