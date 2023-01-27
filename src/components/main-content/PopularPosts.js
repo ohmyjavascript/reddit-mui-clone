@@ -10,6 +10,7 @@ import {
   popularPostHeader,
   postSortContainer,
 } from '@styles/styles';
+import PostSort from '@main/PostSort';
 
 const PopularPosts = () => {
   return (
@@ -19,7 +20,9 @@ const PopularPosts = () => {
       </Typography>
       <Box sx={postSortContainer}>
         <Box sx={postSectionWrapper}>
-          <Box sx={postSortWrapper}>{/* post sort */}</Box>
+          <Box sx={postSortWrapper}>
+            <PostSort />
+          </Box>
 
           {cardContentItems.map((item) => {
             return <h1 key={item.id}> Info card </h1>;
