@@ -12,6 +12,7 @@ import {
 } from '@styles/styles';
 import PostSort from '@main/PostSort';
 import PopularCommunities from '@main/PopularCommunities';
+import Policy from '@main/Policy';
 
 const PopularPosts = () => {
   return (
@@ -31,7 +32,7 @@ const PopularPosts = () => {
         </Box>
         <Box sx={communitiesWrapper}>
           <PopularCommunities />
-          {/* policy */}
+          <Policy />
         </Box>
       </Box>
     </React.Fragment>
