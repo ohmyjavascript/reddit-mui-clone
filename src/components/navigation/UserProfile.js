@@ -16,6 +16,10 @@ import useToggle from '@hooks/useToggle';
 
 const UserProfile = () => {
   const { el, open, handleClick, handleClose } = useToggle();
+  const ctx = {
+    mode: 'light',
+    toggleColorMode: () => {},
+  };
   return (
     <Box sx={{ px: 1 }}>
       <Button sx={grayText} id="basic-button" onClick={handleClick}>
@@ -32,7 +36,37 @@ const UserProfile = () => {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <Box sx={userProfileMinWidth}> test {/* list */}</Box>
+        <Box sx={userProfileMinWidth}>
+          {userProfileItems.map((item) => {
+            return (
+              <List sx={{ p: 0 }} key={item.id}>
+                {item.divider ? (
+                  <Divider />
+                ) : item.nested ? (
+                  <p> Nested list</p>
+                ) : (
+                  <ListItem disablePadding>
+                    {item.isDarkMode ? (
+                      <ListItemButton onClick={ctx.toggleColorMode}>
+                        <ListItemIcon>
+                          {ctx.mode === 'dark' ? item.icon2 : item.icon}
+                        </ListItemIcon>
+                        <ListItemText
+                          primary={ctx.mode === 'dark' ? item.text2 : item.text}
+                        />
+                      </ListItemButton>
+                    ) : (
+                      <ListItemButton>
+                        <ListItemIcon>{item.icon}</ListItemIcon>
+                        <ListItemText primary={item.text} />
+                      </ListItemButton>
+                    )}
+                  </ListItem>
+                )}
+              </List>
+            );
+          })}
+        </Box>
       </Menu>
     </Box>
   );
