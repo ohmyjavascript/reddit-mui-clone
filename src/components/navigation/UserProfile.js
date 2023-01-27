@@ -13,6 +13,7 @@ import Menu from '@mui/material/Menu';
 import React from 'react';
 import { grayText, userProfileMinWidth } from '@styles/styles';
 import useToggle from '@hooks/useToggle';
+import NestedList from '@shared/NestedList';
 
 const UserProfile = () => {
   const { el, open, handleClick, handleClose } = useToggle();
@@ -43,7 +44,11 @@ const UserProfile = () => {
                 {item.divider ? (
                   <Divider />
                 ) : item.nested ? (
-                  <p> Nested list</p>
+                  <NestedList
+                    data={item.data}
+                    icon={item.icon}
+                    text={item.text}
+                  />
                 ) : (
                   <ListItem disablePadding>
                     {item.isDarkMode ? (
