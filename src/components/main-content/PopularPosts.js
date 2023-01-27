@@ -11,6 +11,7 @@ import {
   postSortContainer,
 } from '@styles/styles';
 import PostSort from '@main/PostSort';
+import PopularCommunities from '@main/PopularCommunities';
 
 const PopularPosts = () => {
   return (
@@ -29,7 +30,7 @@ const PopularPosts = () => {
           })}
         </Box>
         <Box sx={communitiesWrapper}>
-          {/* popular community */}
+          <PopularCommunities />
           {/* policy */}
         </Box>
       </Box>
