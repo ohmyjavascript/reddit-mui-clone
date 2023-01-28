@@ -15,6 +15,9 @@ import { IoMdInformationCircleOutline } from 'react-icons/io';
 import { GiConsoleController } from 'react-icons/gi';
 import { VscCircuitBoard } from 'react-icons/vsc';
 import { CiUser } from 'react-icons/ci';
+import { BsChatRight } from 'react-icons/bs';
+import { FaShare } from 'react-icons/fa';
+import { MdOutlineSaveAlt } from 'react-icons/md';
 
 export const nestedList = [
   { id: 1, text: 'Reddit iOS' },
@@ -278,4 +281,10 @@ export const popularCommunityItems = [
       'videos',
     ],
   },
+];
+
+export const cardFooterItems = [
+  { id: 1, icon: <BsChatRight size={18} />, comments: true, text: 'Comments' },
+  { id: 2, icon: <FaShare />, text: 'Share' },
+  { id: 3, icon: <MdOutlineSaveAlt />, text: 'Save' },
 ];

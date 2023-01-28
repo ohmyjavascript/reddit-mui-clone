@@ -15,6 +15,7 @@ import Logo from '@navigation/Logo';
 import SearchBar from '@navigation/SearchBar';
 import CustomButton from '@shared/CustomButton';
 import UserProfile from '@navigation/UserProfile';
+import MobileNav from '@navigation/MobileNav';
 
 const Navbar = () => {
   return (
@@ -24,7 +25,7 @@ const Navbar = () => {
           <Box sx={logoWrapper}>
             <Logo />
             <Box sx={mobileNavWrapper}>
-              {/* mobile nav - shown only in small viewports */}
+              <MobileNav />
             </Box>
           </Box>
           <Box>
