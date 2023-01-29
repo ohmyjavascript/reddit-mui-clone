@@ -14,13 +14,11 @@ import React from 'react';
 import { grayText, userProfileMinWidth } from '@styles/styles';
 import useToggle from '@hooks/useToggle';
 import NestedList from '@shared/NestedList';
+import { ColorModeContext } from '@context/ThemeContext';
 
 const UserProfile = () => {
   const { el, open, handleClick, handleClose } = useToggle();
-  const ctx = {
-    mode: 'light',
-    toggleColorMode: () => {},
-  };
+  const ctx = React.useContext(ColorModeContext);
   return (
     <Box sx={{ px: 1 }}>
       <Button sx={grayText} id="basic-button" onClick={handleClick}>

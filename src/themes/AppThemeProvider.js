@@ -75,9 +75,9 @@ const AppThemeProvider = (props) => {
   };
 
   return (
-    <ColorModeContext value={{ mode, toggleColorMode }}>
+    <ColorModeContext.Provider value={{ mode, toggleColorMode }}>
       <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
-    </ColorModeContext>
+    </ColorModeContext.Provider>
   );
 };
 
